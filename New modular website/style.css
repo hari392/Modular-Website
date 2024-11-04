@@ -1,0 +1,702 @@
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+/* Header style */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+  width: 100%;
+  color: #000;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-bottom: 1px solid #555;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background-color: #fff;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Space between logo and nav links */
+    align-items: center;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: center; 
+    flex-grow: 1; 
+}
+
+.nav-links a {
+    color: #000;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+    transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+    color:  #FA9B3C; /* Darker on hover */
+}
+
+.logo-image {
+  height: 30px; /* Adjust to fit your design */
+  width: auto;
+  margin-right: 8px; /* Space between logo and text */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+    font-size: 30px;
+    color:#72519E;
+    margin-left: 650px;
+    font-weight: bold;
+}
+
+/* Get Started Button 
+.get-started {
+    padding: 8px 25px;
+    background-color:  #00ADFF; 
+    color: #ffffff;
+    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+    text-decoration: none;
+    border-radius: 40px;
+    margin-right:70px ;
+    border: none;
+    cursor: pointer; 
+}*/
+
+/* Media Queries for Responsiveness */
+
+@media (max-width: 1024px) {
+  .nav-links {
+      gap: 15px;
+  }
+
+  .get-started {
+      padding: 8px 20px;
+  }
+
+  .logo {
+      font-size: 22px;
+      margin-left: 5px;
+  }
+}
+
+/* Tablets (max-width: 768px) */
+@media (max-width: 768px) {
+  header {
+      padding: 10px 15px;
+  }
+
+  .nav-links {
+      display: none; /* Hide nav links on smaller screens */
+  }
+
+  .menu-icon {
+      display: inline-block;
+      font-size: 24px;
+      cursor: pointer;
+  }
+
+  .logo {
+      margin-left: 10px;
+      font-size: 22px;
+  }
+
+  .get-started {
+      padding: 8px 16px;
+      margin-left: 15px;
+  }
+}
+
+/* Mobile screens (max-width: 480px) */
+@media (max-width: 480px) {
+  header {
+      padding: 5px 10px;
+  }
+
+  .logo {
+      font-size: 20px;
+  }
+
+  .get-started {
+      padding: 8px 12px;
+      font-size: 14px;
+  }
+}
+
+/* Smallest screens (max-width: 360px) */
+@media (max-width: 360px) {
+  header {
+      padding: 5px 5px;
+  }
+
+  .get-started {
+      padding: 5px 8px;
+      font-size: 12px;
+  }
+}
+
+/* Dropdown Toggle for Mobile Nav */
+.menu-icon {
+  display: none; /* Hide menu icon by default */
+}
+
+/* Show the menu icon for mobile and toggle the dropdown */
+@media (max-width: 768px) {
+  .menu-icon {
+      display: block;
+  }
+
+  .dropdown-nav {
+      display: block;
+      width: 100%;
+      background-color: #FFFFFF;
+      position: absolute;
+      top: 100%; /* Position below header */
+      left: 0;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .dropdown-nav a {
+      padding: 10px 20px;
+      text-align: left;
+      display: block;
+      border-bottom: 1px solid #ddd;
+  }
+}
+
+/*side bar style*/
+* {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .no-dropdown {
+    padding: 15px;
+    font-size: 17px;
+    color: black;
+    font-weight: bold;
+    background: none;
+    border-bottom: 1px solid #555;
+  }
+  
+  .no-dropdown:hover{
+    color:  #FA9B3C;
+
+  }
+
+.sidebar {
+    height: 100vh;
+    width: 250px;
+    background-color: white;
+    color: #000;
+    position: fixed;
+    margin-left: 50px;
+    padding-top: 50px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-color: #888 #f1f1f1;
+    padding-bottom: 100px;
+  }
+  
+  .sidebar a{
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    color: #000000b3;
+    padding: 15px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .sidebar a:hover {
+    color: #FA9B3C;
+
+  }
+
+  .dropdown-btn {
+    padding: 15px;
+    font-size: 17px;
+    border: none;
+    outline: none;
+    background: none;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #555; /* Thin line separator */
+  }
+
+  .dropdown-btn:hover {
+    color: #FAD75A;
+  }
+  
+  .dropdown-container {
+    display: none;
+    background-color: white;
+  }
+  
+  .dropdown-container a {
+    padding-left: 30px;
+  }
+
+  /* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+  .sidebar {
+      width: 220px;
+      margin-left: 20px;
+  }
+  
+  .dropdown-btn {
+      font-size: 16px;
+  }
+  
+  .sidebar a {
+      font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+      width: 180px;
+      padding-top: 15px;
+  }
+  
+  .dropdown-btn {
+      font-size: 15px;
+      padding: 10px;
+  }
+  
+  .sidebar a {
+      padding: 10px;
+      font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+      width: 100%; 
+      height: auto;
+      position: relative;
+      margin-left: 0;
+      padding-top: 10px;
+  }
+
+  .dropdown-btn {
+      font-size: 14px;
+      padding: 8px 10px;
+  }
+
+  .sidebar a {
+      font-size: 13px;
+      padding: 8px 10px;
+  }
+}
+
+@media (max-width: 360px) {
+  .sidebar {
+      width: 100%;
+      padding: 5px;
+  }
+
+  .dropdown-btn {
+      font-size: 13px;
+      padding: 6px 8px;
+  }
+
+  .sidebar a {
+      font-size: 12px;
+      padding: 6px 8px;
+  }
+}
+  
+  /* Arrow Styling */
+  .arrow {
+    border: solid #000;
+    border-width: 0 2px 2px 0;
+    padding: 4px;
+    display: inline-block;
+    transition: transform 0.3s;
+    transform: rotate(315deg);
+    margin-left: 100px;
+  }
+  
+  .dropdown-btn.active .arrow {
+    transform: rotate(405deg);
+  }
+
+  /* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .arrow {
+      margin-left: 80px; 
+  }
+}
+
+@media (max-width: 768px) {
+  .arrow {
+      margin-left: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .arrow {
+      margin-left: 40px; 
+  }
+}
+
+@media (max-width: 360px) {
+  .arrow {
+      margin-left: 20px; 
+  }
+}
+
+  /*scroll bar*/
+
+/* Thin scrollbar for WebKit browsers (Chrome, Safari) */
+.sidebar::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 4px; 
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Darker color on hover */
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Background of the scrollbar track */
+}
+
+@media (max-width: 1024px) {
+  .sidebar::-webkit-scrollbar {
+      width: 16px; 
+  }
+  .sidebar::-webkit-scrollbar-thumb {
+      background: #666; 
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar::-webkit-scrollbar {
+      width: 6px; 
+  }
+  .sidebar::-webkit-scrollbar-thumb {
+      background: #666; 
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar::-webkit-scrollbar {
+      width: 4px; 
+  }
+  .sidebar::-webkit-scrollbar-thumb {
+      background: #444; 
+  }
+}
+
+
+ /*content.css*/
+
+ body {
+  font-family: "Roboto", sans-serif; 
+  margin: 20px; 
+  line-height: 1.6; 
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
+}
+
+.content-container h1{
+  font-family: "Roboto", sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  margin-left:400px;
+  margin-top: 50px;
+  padding: 10px;
+}
+
+.content-container img {
+  max-width: 100%;
+  height: 300px; 
+  display:flex; 
+  margin-left: 400px;
+  padding: 10px;
+}
+
+.content-container p {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically if necessary */
+  text-align: left; /* Align text left within centered content */
+  margin-left: 390px;
+  margin-right:300px;
+  padding: 20px;
+}
+
+.content-container:before {
+  content: ""; /* Empty content to create a spacer */
+  display: block;
+  height: 80px; /* Adjust based on the height of your fixed header */
+  margin-top: -80px; /* Offset the space above to align content at the top */
+}
+
+@media (max-width: 1024px) {
+  .content-container h1 {
+    font-size: 30px;
+    margin-left: 350px;
+  }
+
+  .content-container p {
+    font-size: 15px;
+    margin-left: 340px;
+    margin-right: 160px;
+  }
+
+  .content-container img {
+    height: 250px;
+    margin-left: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .content-container h1 {
+    font-size: 24px;
+    margin-left: 260px;
+  }
+
+  .content-container p {
+    font-size: 14px;
+    margin-left: 250px;
+
+  }
+
+  .content-container img {
+    height: 200px;
+    margin: 0 auto;
+  }
+}
+
+/* Small screens (e.g., large smartphones) */
+@media (max-width: 480px) {
+  .content-container h1 {
+    font-size: 20px;
+    margin: 0;
+    text-align: center;
+  }
+
+  .content-container p {
+    font-size: 13px;
+    margin: 10px;
+    text-align: left;
+  }
+
+  .content-container img {
+    height: 180px;
+    margin: 0 auto;
+  }
+}
+
+/*
+@media (max-width: 1024px) {
+  .content-container h1 {
+    font-size: 22px;
+    padding: 8px;
+    max-width: 90%;
+  }
+
+  .content-container p {
+    font-size: 15px;
+    padding: 18px;
+    max-width: 100%;
+  }
+
+  .content-container img {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .content-container h1 {
+    font-size: 20px;
+    padding: 8px;
+  }
+
+  .content-container p {
+    font-size: 15px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .content-container h1 {
+    font-size: 18px;
+    padding: 5px;
+    text-align: center;
+  }
+
+  .content-container p {
+    font-size: 14px;
+    padding: 4px;
+    text-align: left;
+  }
+
+  .content-container img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Footer Styling */
+
+#footer {
+  color: #000;
+  text-align: center;
+  padding: 15px;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  position: relative;
+  border-top: 1px solid #ccc;
+  width: 50%;
+  bottom: 0;
+  margin-left: 400px;
+  margin-top: auto;
+}
+
+/* Responsive Footer Adjustment */
+@media (max-width: 768px) {
+  #footer {
+    font-size: 12px;
+    padding: 10px;
+  }
+}
+
+/* Container for title, icon, and text */
+.title-container {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 50px;
+  padding: 40px;
+  margin-left: 380px;
+  max-width: 800px;
+}
+
+/* Ring around the icon circle */
+.icon-ring {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 12px solid #d4d6d6e2; /* Ring color */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+}
+
+/* Circle around the icon */
+.icon-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: transparent; /* Circle color */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Icon inside the circle */
+.title-icon {
+  width: 27px;
+  height: 27px;
+}
+
+/* Text container for alignment */
+.text-content {
+  text-align: left;
+}
+
+/* Title styling */
+.scribe-title {
+  font-size: 2em;
+  padding:5px;
+  color: #333;
+  margin: 0 0 0px;
+}
+
+
+/* Description styling */
+.scribe-description {
+  color: #666;
+  font-size: 1rem;
+  width: 90%;
+  margin: 0 0 10px;
+}
+
+
+/* Card styling */
+.scribe-step {
+  width: 700px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+  margin: 20px;
+  margin-left: 418px;
+  margin-bottom: 50px;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.scribe-step:hover {
+  transform: translateY(-5px);
+}
+
+/* Step text */
+.scribe-step-text {
+  padding: 20px;
+  font-size: 1em;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Image styling */
+.scribe-screenshot-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.scribe-screenshot {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
